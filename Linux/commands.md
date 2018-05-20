@@ -54,13 +54,13 @@ commands cat head tail cat less sort
 
 file movements . cp rsync tar mv rm ls 
 
-`cp -i filename1 filename2` copy file , -i interactive ask for overwrite , -f force copy, 
-`cp -R folder folder` -R Recursive copy including hidden files
-`mv filename1 filename2` move file
-`ls -R files/` recursive listing of all files
-`rm file`  remove file 
-`rmdir folder` remove directory
-`rm -rf folder` -r is for recursive and -f is for force
+* `cp -i filename1 filename2` copy file , -i interactive ask for overwrite , -f force copy, 
+* `cp -R folder folder` -R Recursive copy including hidden files
+* `mv filename1 filename2` move file
+* `ls -R files/` recursive listing of all files
+* `rm file`  remove file 
+* `rmdir folder` remove directory
+* `rm -rf folder` -r is for recursive and -f is for force
 
 
 
