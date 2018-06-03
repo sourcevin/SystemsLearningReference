@@ -66,17 +66,17 @@ file movements . cp rsync tar mv rm ls
 
 
 permissions
-* drwxr-xr-x+ 
+* `drwxr-xr-x+`   <br>
             d = directory
             r = read permission
             w = write permission
             x = execute permission
             - = no permission
-* user types
-            u - Owner
-            g - Group
-            o - Others
-            a - All users
+* user types  <br>
+            u - Owner  <br>
+            g - Group  <br>
+            o - Others  <br>
+            a - All users  <br>
 * 
 
 
