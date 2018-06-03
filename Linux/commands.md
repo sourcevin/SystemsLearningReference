@@ -33,10 +33,9 @@ ssh port 22 .  created by Tatu Ylolen
 ### others
 
 * `pwd` print working directory
+* `du -sh`  disk usage -s summary -h human readable
+* `file file1.txt` to get the type of file
 
-### rights
-
-* `chmod +x test.sh`  add rights to execute the file
 
 ### Text Files
 
@@ -58,6 +57,7 @@ file movements . cp rsync tar mv rm ls
 * `cp -R folder folder` -R Recursive copy including hidden files
 * `mv filename1 filename2` move file
 * `ls -R files/` recursive listing of all files
+* `ls -lh file1` human readable format
 * `rm file`  remove file 
 * `rmdir folder` remove directory
 * `rm -rf folder` -r is for recursive and -f is for force
@@ -78,14 +78,12 @@ file movements . cp rsync tar mv rm ls
             o - Others  <br>
             a - All users  <br>
 * r=4 w=2 x=1
-
 * `chmod a+rwx file1`  add permissions to all users
 * `chmod a-rwx file2` remove permissions from all users
 * `chmod a=rwx file1` set file permissions to all users
 * `chmod 740 file1` set file permission 
 * `chown user:group file1` change owner and group of the file
 * `chown --reference=file1 file2` copy file permissions
-*
 
 ```
 The setuid/setguid permissions are used to tell the system to run an executable as the owner with the owner\'s permissions.
@@ -102,8 +100,13 @@ To set the sticky bit on a directory named dir1 you would issue the command chmo
 
 
 
+### creating backups
 
+* `tar -cvf etc.tar /etc`  -c create , -v verbose, -f name of file 
+* `tar -cvzf etc.tar.gz /etc` -z for zip
+* `tar -xvzf etc.tar.gz` -x for expand
 
+### 
 
 
 
