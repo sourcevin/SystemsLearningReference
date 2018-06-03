@@ -87,6 +87,21 @@ file movements . cp rsync tar mv rm ls
 * `chown --reference=file1 file2` copy file permissions
 *
 
+```
+The setuid/setguid permissions are used to tell the system to run an executable as the owner with the owner\'s permissions.
+Be careful using setuid/setgid bits in permissions. If you incorrectly assign permissions to a file owned by root with the setuid/setgid bit set, then you can open your system to intrusion.
+You can only assign the setuid/setgid bit by explicitly defining permissions. The character for the setuid/setguid bit is s.
+So do set the setuid/setguid bit on file2.sh you would issue the command chmod g+s file2.sh.
+```
+
+```
+The sticky bit can be very useful in shared environment because when it has been assigned to the permissions on a directory it sets it so only file owner can rename or delete the said file.
+You can only assign the sticky bit by explicitly defining permissions. The character for the sticky bit is t.
+To set the sticky bit on a directory named dir1 you would issue the command chmod +t dir1.
+```
+
+
+
 
 
 
