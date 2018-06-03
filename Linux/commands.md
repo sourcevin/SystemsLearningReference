@@ -61,6 +61,10 @@ file movements . cp rsync tar mv rm ls
 * `rm file`  remove file 
 * `rmdir folder` remove directory
 * `rm -rf folder` -r is for recursive and -f is for force
+* `ls -l -t -r` -l for long listing -t for timestamp reverse
+* `ls -F` -F for file type
+
+
 
 
 
