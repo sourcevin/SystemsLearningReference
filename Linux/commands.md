@@ -65,9 +65,19 @@ file movements . cp rsync tar mv rm ls
 * `ls -F` -F for file type
 
 
-
-
-
+permissions
+* drwxr-xr-x+ 
+            d = directory
+            r = read permission
+            w = write permission
+            x = execute permission
+            - = no permission
+* user types
+            u - Owner
+            g - Group
+            o - Others
+            a - All users
+* 
 
 
 
