@@ -65,7 +65,7 @@ file movements . cp rsync tar mv rm ls
 * `ls -F` -F for file type
 
 
-permissions
+### permissions  https://www.guru99.com/file-permissions.html
 * `drwxr-xr-x+`   <br>
             d = directory
             r = read permission
@@ -77,7 +77,17 @@ permissions
             g - Group  <br>
             o - Others  <br>
             a - All users  <br>
-* 
+* r=4 w=2 x=1
+
+* `chmod a+rwx file1`  add permissions to all users
+* `chmod a-rwx file2` remove permissions from all users
+* `chmod a=rwx file1` set file permissions to all users
+* `chmod 740 file1` set file permission 
+* `chown user:group file1` change owner and group of the file
+* `chown --reference=file1 file2` copy file permissions
+*
+
+
 
 
 
