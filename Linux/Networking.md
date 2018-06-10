@@ -21,16 +21,17 @@
 ```
 
 ##### IP and subnet mask
-
+```
  108           161       228       70
 01101100     10100001   11100100   01000110
 
 11111111     11111111   11110000   00000000
 255            255       240         0
+```
 
 The subnet mask indicates what part of the IP address is network and what part is host. here there are 4096 address. first one is network address and last one is broadcast address
 
-
+```
 IP Address:	108.161.228.70
 Network Address:	108.161.224.0
 Usable Host IP Range:	108.161.224.1 - 108.161.239.254
@@ -50,4 +51,4 @@ Hex ID:	0x6ca1e446
 in-addr.arpa:	70.228.161.108.in-addr.arpa
 IPv4 Mapped Address:	::ffff:6ca1.e446
 6to4 Prefix:	2002:6ca1.e446::/48
-
+```
