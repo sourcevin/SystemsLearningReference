@@ -116,7 +116,12 @@ To set the sticky bit on a directory named dir1 you would issue the command chmo
 * `find /etc/ -type f -user xyz`  find files by user xyz
 
 
+### grep command
 
+* `grep -i "UNix" geekfile.txt` case insensitive search for unix 
+* `grep -r --include "*.txt" texthere .`  recursive search for texthere in present directory for all *.txt
+* `find . -name '*bills*' -exec grep -H "put" {} +` exec grep on the search, -H for file name 
+* `
 
 
 
