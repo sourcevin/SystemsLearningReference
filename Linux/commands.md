@@ -115,13 +115,65 @@ To set the sticky bit on a directory named dir1 you would issue the command chmo
 * `find /etc/ -mmin +10` accessed 10 minutes ago
 * `find /etc/ -type f -user xyz`  find files by user xyz
 
+From https://www.everythingcli.org/find-exec-vs-find-xargs/
+
+### find \;
+* `find . [args] -exec [cmd] {} \;`
+{} Is a placeholder for the result found by find
+\; Says that for each found result, the command (in this case ‘grep’) is executed once with the found result
+
+* `find . [args] -exec [cmd] {} \+`
+{} Is a placeholder for the result found by find
+\+ All result lines are concatenated and the command (in this case ‘grep’) is executed only a single time with all found results as a parameter
+
+So in the above example ‘grep’ is executed only once and its parameter are all files found with the specified pattern.
+
+equivalent in find | xargs
+* `find . [args] -print0 | xargs -0 [cmd]`
+-print0 Tells find to print all results to std, each separated with the ASCII NUL character ‘\000’
+-0 Tells xargs that the input will be separated with the ASCII NUL character ‘\000’
+
+You have to use both or neither of them. The advantage is that all results will be handed over to xargs as a single string without newline separation. NUL charater separation is a way to escape files which also contain spaces in their filenames.
+
+All results by find are piped to xargs and you can now execute commands on them.
+
+
+different in find | xargs
+xargs with -n1
+* `find .[args] -print0 | xargs -0 -n1 [cmd]`
+-n1 Tells xarg to execute the command [cmd] with only one argument (In this case only one file found by find). This is equal to:
+
+`find . -exec [cmd] {} \;`
+So in the above example ‘grep’ is executed as many times as a file with the specified pattern has been found:
+
+grep [...] file1
+grep [...] file2
+...
+
+xargs without -n
+* `find .[args] -print0 | xargs -0 [cmd]`
+If no -n[int] is specified, xargs uses the default of -n5000 (see man xargs).
+This means that xargs uses up to 5000 parameters for the command and executes it once, instead of 5000 times.
+This is equal to:
+
+* `find . -exec [cmd] {} +;`  
+So in the above example ‘grep’ is executed only once and its parameter are all files found with the specified pattern.
+
+grep [...] file1 file2 ... file5000
+grep [...] file5001 file5002 ... 
+
+
+
+
+
+
 
 ### grep command
 
 * `grep -i "UNix" geekfile.txt` case insensitive search for unix 
 * `grep -r --include "*.txt" texthere .`  recursive search for texthere in present directory for all *.txt
-* `find . -name '*bills*' -exec grep -H "put" {} +` exec grep on the search, -H for file name 
-* `
-
+* `find . -name '*bills*' -exec grep -H "put" {} +` exec grep on the search, -H for file name , {} current processing, + combines file name
+* `find . -type f -exec mv {} {}.bak ";"`  
+* `find . -type f | xargs grep 'test'` search for files and grep it
 
 
