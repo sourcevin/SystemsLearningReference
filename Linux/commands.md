@@ -165,9 +165,6 @@ grep [...] file5001 file5002 ...
 
 
 
-
-
-
 ### grep command
 
 * `grep -i "UNix" geekfile.txt` case insensitive search for unix 
@@ -175,5 +172,23 @@ grep [...] file5001 file5002 ...
 * `find . -name '*bills*' -exec grep -H "put" {} +` exec grep on the search, -H for file name , {} current processing, + combines file name
 * `find . -type f -exec mv {} {}.bak ";"`  
 * `find . -type f | xargs grep 'test'` search for files and grep it
+
+
+### streams
+
+write to file > append to file >> <br>
+set -o noclobber
+< read from file
+unnamed pipes | 
+named pipes mkfifo
+
+* `ls /etc > file.txt` pipe output to file
+* `ls /etc .     
+
+
+
+
+
+
 
 
