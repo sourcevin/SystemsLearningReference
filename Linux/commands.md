@@ -106,7 +106,14 @@ To set the sticky bit on a directory named dir1 you would issue the command chmo
 * `tar -cvzf etc.tar.gz /etc` -z for zip
 * `tar -xvzf etc.tar.gz` -x for expand
 
-### 
+### find command
+
+* `find . -name file1` find this directory for file1
+* `find /etc/ -name *.conf` searching for files with conf extn
+* `find /etc/ -type d -name *conf` searching for directory with name conf
+* `find /home/xyzuser/ -name *.doc -atime -1` accessed in last one day
+* `find /etc/ -mmin +10` accessed 10 minutes ago
+* `find /etc/ -type f -user xyz`  find files by user xyz
 
 
 
