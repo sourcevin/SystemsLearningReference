@@ -185,6 +185,15 @@ named pipes mkfifo
 * `ls /etc > file.txt` pipe output to file
 * `ls /etc .     `
 
+### heredoc
+
+```
+cat << EOF
+several lines of 
+my data
+listed here
+EOF
+```
 
 
 
