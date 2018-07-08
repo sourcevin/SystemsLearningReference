@@ -183,7 +183,7 @@ unnamed pipes |
 named pipes mkfifo
 
 * `ls /etc > file.txt` pipe output to file
-* `ls /etc .     
+* `ls /etc .     `
 
 
 
